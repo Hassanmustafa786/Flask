@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Chatbot</title>
+</head>
+<body>
+    <h1> 💬 Chatbot</h1>
+    <div id="chat-container">
+        <div id="chat-box">
+            <div class="bot-message">
+                <strong>🤖</strong> {{ initial_message }}
+            </div>
+        </div>
+        <form id="user-input-form">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button type="submit" id="send-button">Send</button>
+            <button type="button" id="voice-button">Start Voice Input</button>
+        </form>
+    </div>
+</body>
+</html>
