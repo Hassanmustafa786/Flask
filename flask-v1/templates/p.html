@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='p.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='p.js') }}"></script>
+    <title>Audio Player</title>
+</head>
+<body>
+    <h1>Audio Player</h1>
+    <h2>MP3 File</h2>
+    <label for="mp3-player">🤖:</label>
+    <audio controls>
+        <source src="{{ url_for('stream_mp3') }}" type="audio/mp3">
+        Your browser does not support the audio element.
+    </audio>
+
+    
+    <h1>Dropdown Example</h1>
+    <form id="myForm" action="{{ url_for('process') }}" method="post">
+        <label for="dropdown">Select an option:</label>
+        <select id="dropdown" name="dropdown" onchange="submitForm()">
+            <option value="en">English</option>
+            <option value="ur">Urdu</option>
+            <option value="bn">Bengali</option>
+            <option value="ar">Arabic</option>
+            <option value="es">Spanish</option>
+        </select>
+    </form>
+</body>
+</html>
