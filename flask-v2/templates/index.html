@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+    <title>Chatbot</title>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <h1> 💬 Chatbot</h1>
+            <form method="GET" action="/" id="myForm">
+                <label for="language-select">Select Language:</label>
+                <select id="language-select" name="language-select" onchange="submitForm()">
+                    <option value="None">Select the language</option>
+                    <option value="0">English</option>
+                    <option value="2">Urdu</option>
+                    <option value="4">Bengali</option>
+                    <option value="5">Arabic</option>
+                    <option value="3">Spanish</option>
+                </select>
+            </form>
+        </div>
+    </nav>
+
+    <div id="chat-container">
+        <div id="chat-box">
+            <div class="bot-message">
+                <strong>🤖:</strong> <span id="initial-message">{{ initial_message }}</span>
+            </div>
+        </div>
+
+        <form id="user-input-form">
+            <input type="text" id="user-input" placeholder="Type your message...">
+            <button type="submit" id="send-button">▶</button>
+            <button type="button" id="voice-button">🎙️</button>
+        </form>
+    </div>
+</body>
+</html>
