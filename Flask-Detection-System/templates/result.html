@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result</title>
+</head>
+<body>
+    <h1>Result</h1>
+    <p>Name: {{ result.name }}</p>
+    <p>Roll Number: {{ result.roll }}</p>
+    <p>********************</p>
+    <table border = 1> 
+        {% for key, value in result.items() %} 
+          
+           <tr> 
+              <th style="padding: 10px;"> {{ key }} </th> 
+              <td style="padding: 10px;"> {{ value }} </td> 
+           </tr> 
+             
+        {% endfor %} 
+     </table>
+</body>
+</html>

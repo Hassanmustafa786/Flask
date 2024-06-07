@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Cookie</title>
+</head>
+<body>
+    <h1>Set Cookie</h1>
+    <form action="/setcookie" method="POST">
+        <label for="name">Enter your email:</label>
+        <input type="email" name="email" id="email">
+        <button type="submit">Set Cookie</button>
+    </form>
+    <br>
+    <br>
+    <form action="/setcookie/getcookie" method="GET">
+        <button type="submit">Get Cookie</button>
+    </form>
+</body>
+</html>
